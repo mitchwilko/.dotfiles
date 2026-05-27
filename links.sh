@@ -7,4 +7,4 @@ ln -nsf ./.dotfiles/condarc ~/.condarc
 ln -nsf ./.dotfiles/conda ~/.conda
 
 ln -nsf ./.dotfiles/zshrc ~/.zshrc
-# ln -nsf ./.dotfiles/bashrc ~/.bashrc
+ln -nsf ./.dotfiles/bashrc ~/.bashrc
