@@ -4,3 +4,4 @@
 /opt/anaconda3/envs/ELEC3105
 /opt/anaconda3/envs/sqlApp
 /opt/anaconda3/envs/physThesis
+/opt/anaconda3/envs/physThesis_safe
