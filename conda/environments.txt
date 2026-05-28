@@ -5,3 +5,4 @@
 /opt/anaconda3/envs/sqlApp
 /opt/anaconda3/envs/physThesis
 /opt/anaconda3/envs/physThesis_safe
+/home/mitch/anaconda3
