@@ -19,10 +19,18 @@ colorscheme ghdark
 set number
 set relativenumber
 set laststatus=2
+" set colorcolumn=81
+" highlight ColorColumn ctermbg=DarkBlue
+" Make 81st column stand out
+" highlight ColorColumn ctermbg=Red
+highlight ColorColumn ctermbg=Cyan
+call matchadd('ColorColumn', '\%81v', 100)
+highlight ColorColumn ctermbg=Cyan
 
 " Set the cursor between box and line in insert and normal mode
+let &t_EI = "\e[1 q"
+let &t_SR = "\e[3 q"
 let &t_SI = "\e[5 q"
-let &t_EI = "\e[2 q"
 " \e[6 q: Steady bar (line).
 " \e[5 q: Blinking bar.
 " \e[2 q: Steady block. 
@@ -31,12 +39,14 @@ let &t_EI = "\e[2 q"
 set splitright
 set splitbelow
 
-" Airline configs
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-" let g:airline_theme='ghdark'
-
 " Light Line Config
 let g:lightline = {
       \ 'colorscheme': 'ghdark',
       \ }
+
+" Netrw Configs 
+" These are formed as auto commands 
+autocmd FileType netrw setlocal relativenumber
+let g:netrw_keepdir = 0
+let g:netrw_browse_split = 0
+" let g:netrw_winsize = 25
