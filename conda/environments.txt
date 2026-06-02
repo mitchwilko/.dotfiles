@@ -1,0 +1,9 @@
+/opt/anaconda3
+/opt/anaconda3/envs/physicsLabs
+/opt/anaconda3/envs/ultrasound
+/opt/anaconda3/envs/ELEC3105
+/opt/anaconda3/envs/sqlApp
+/opt/anaconda3/envs/physThesis
+/opt/anaconda3/envs/physThesis_safe
+/home/mitch/anaconda3
+/home/mitch/anaconda3/envs/physThesis
