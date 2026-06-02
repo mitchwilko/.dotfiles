@@ -18,7 +18,7 @@ unset __conda_setup
 autoload -Uz colors && colors
  
 # Set Prompt: Username (yellow), Path (blue), and Color Reset ($)
-PROMPT='%F{green}%n@%m%f %F{blue}%1~%f %# '
+PROMPT='%F{yellow}%n@%m%f %F{magenta}%1~%f %# '
 
 # Adding for Light Line and Air Line
 export TERM=xterm-256color
