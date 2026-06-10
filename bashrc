@@ -136,3 +136,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Custom Wake on LAN Command
+alias wol='wakeonlan -f ~/.wolhosts'
