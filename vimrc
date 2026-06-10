@@ -18,14 +18,13 @@ call plug#end()
 colorscheme ghdark
 set number
 set relativenumber
+set cursorline
 set laststatus=2
 " set colorcolumn=81
 " highlight ColorColumn ctermbg=DarkBlue
+" highlight ColorColumn ctermbg=DarkBlue
 " Make 81st column stand out
-" highlight ColorColumn ctermbg=Red
-highlight ColorColumn ctermbg=DarkBlue
-call matchadd('ColorColumn', '\%81v', 100)
-highlight ColorColumn ctermbg=DarkBlue
+" call matchadd('ColorColumn', '\%81v', 100)
 
 " Set the cursor between box and line in insert and normal mode
 let &t_EI = "\e[1 q"
