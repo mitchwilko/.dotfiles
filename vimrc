@@ -11,6 +11,7 @@ Plug 'sheerun/vim-polyglot'
 " Plug 'wojciechkepka/vim-github-dark'
 " Plug 'vim-airline/vim-airline'
 Plug 'itchyny/lightline.vim'
+Plug 'lervag/vimtex'
 
 call plug#end()
 
@@ -49,3 +50,14 @@ autocmd FileType netrw setlocal relativenumber
 let g:netrw_keepdir = 0
 let g:netrw_browse_split = 0
 " let g:netrw_winsize = 25
+
+" Vimtex Set up paramters
+let g:vimtex_enabled = 1
+syntax enable
+let g:vimtex_compiler_enabled = 0
+let g:vimtex_view_enabled = 0
+let g:vimtex_motion_enabled = 0
+let g:vimtex_text_obj_enabled = 0
+let g:vimtex_completion_enabled = 1
+let g:vimtex_toc_enabled = 0
+let g:vimtex_matchparen_enabled = 0
