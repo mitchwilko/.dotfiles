@@ -18,7 +18,7 @@ call plug#end()
 
 " Set default visual basis
 colorscheme ghdark
-" let g:molokai_original = 1
+" let g:molokai_original = 0
 set number
 set relativenumber
 set cursorline
