@@ -7,3 +7,4 @@
 /opt/anaconda3/envs/physThesis_safe
 /home/mitch/anaconda3
 /home/mitch/anaconda3/envs/physThesis
+/home/mitch/anaconda3/envs/wolfram

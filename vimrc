@@ -12,11 +12,13 @@ Plug 'sheerun/vim-polyglot'
 " Plug 'vim-airline/vim-airline'
 Plug 'itchyny/lightline.vim'
 Plug 'lervag/vimtex'
+Plug 'tomasr/molokai'
 
 call plug#end()
 
 " Set default visual basis
 colorscheme ghdark
+" let g:molokai_original = 1
 set number
 set relativenumber
 set cursorline
@@ -58,6 +60,8 @@ let g:vimtex_compiler_enabled = 0
 let g:vimtex_view_enabled = 0
 let g:vimtex_motion_enabled = 0
 let g:vimtex_text_obj_enabled = 0
-let g:vimtex_completion_enabled = 1
+let g:vimtex_completion_enabled = 0
+let g:vimtex_indent_enabled = 0
 let g:vimtex_toc_enabled = 0
 let g:vimtex_matchparen_enabled = 0
+
