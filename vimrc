@@ -18,7 +18,7 @@ Plug 'huyvohcmc/atlas.vim'
 call plug#end()
 
 " Set default visual basis
-colorscheme atlas2
+colorscheme mono
 " let g:molokai_original = 0
 set number
 set relativenumber
@@ -44,7 +44,7 @@ set splitbelow
 
 " Light Line Config
 let g:lightline = {
-      \ 'colorscheme': 'atlas',
+      \ 'colorscheme': 'mono',
       \ }
 
 " Netrw Configs 
