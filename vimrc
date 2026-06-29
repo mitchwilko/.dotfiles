@@ -13,11 +13,12 @@ Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'lervag/vimtex'
 Plug 'tomasr/molokai'
+Plug 'huyvohcmc/atlas.vim'
 
 call plug#end()
 
 " Set default visual basis
-colorscheme ghdark
+colorscheme atlas2
 " let g:molokai_original = 0
 set number
 set relativenumber
@@ -43,7 +44,7 @@ set splitbelow
 
 " Light Line Config
 let g:lightline = {
-      \ 'colorscheme': 'ghdark',
+      \ 'colorscheme': 'atlas',
       \ }
 
 " Netrw Configs 
