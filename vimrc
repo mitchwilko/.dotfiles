@@ -23,6 +23,7 @@ colorscheme mono
 set number
 set relativenumber
 set cursorline
+" hi CursorLine gui=underline cterm=underline ctermfg=NONE ctermbg=NONE
 set laststatus=2
 " set colorcolumn=81
 " highlight ColorColumn ctermbg=DarkBlue
@@ -42,7 +43,7 @@ let &t_SI = "\e[5 q"
 :set noexpandtab	" Stop converting tabs to spaces
 :set tabstop=4		" Set tab width to 4 spaces
 :set shiftwidth=4	" Set auto-indent width to 4 spaces
-:retab!				" Force-convert all existing space-indents to real tabs
+":retab!				" Force-convert all existing space-indents to real tabs
 ":set listchars=tab:>-,trail:-
 set listchars=tab:├─>
 "set listchars=tab:\|\ ,trail:-,extends:>,precedes:<
