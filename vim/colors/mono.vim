@@ -8,16 +8,16 @@ endif
 let g:colors_name='mono'
 
 let g:atlas_colors = {
-  \ "bg"      : ["#000000", 16],
+  \ "bg"      : ["#000000", 0],
   \ "dark"    : ["#262626", 235],
   \ "dim"     : ["#444444", 238],
-  \ "muted"   : ["#666666", 242],
-  \ "normal"  : ["#c0c0c0", 250],
+  \ "muted"   : ["#8a8a8a", 245],
+  \ "normal"  : ["#d0d0d0", 252],
   \ "bright"  : ["#e4e4e4", 254],
-  \ "white"   : ["#ffffff", 255],
-  \ "red"     : ["#f43753", 203],
-  \ "yellow"  : ["#ffc24b", 221],
-  \ "green"   : ["#5af78d", 119],
+  \ "white"   : ["#ffffff", 15],
+  \ "red"     : ["#d70000", 160],
+  \ "yellow"  : ["#ffdf00", 220],
+  \ "green"   : ["#00af00", 34],
   \ "none"    : ["NONE", "NONE"]
   \ }
 
