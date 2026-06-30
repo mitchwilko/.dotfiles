@@ -71,7 +71,7 @@ call s:hl("AtlasNormalUnder",  "normal", "none", "underline")
 
 " --- UI ---
 call s:hl("Normal",       "normal",  "bg")
-call s:hl("LineNr",       "dim",     "none")
+call s:hl("LineNr",       "muted",     "none")
 call s:hl("CursorLine",   "none",    "dark")
 call s:hl("CursorLineNr", "bright",  "dark")
 call s:hl("CursorColumn", "none",    "dark")
@@ -146,16 +146,16 @@ call s:hl("Boolean",     "bright", "none")
 call s:hl("Float",       "bright", "none")
 call s:hl("Identifier",  "bright", "none")
 call s:hl("Function",    "bright", "none")
-call s:hl("Statement",   "red",    "none")
-call s:hl("Conditional", "red",    "none")
+call s:hl("Statement",   "normal",    "none")
+call s:hl("Conditional", "normal",    "none")
 call s:hl("Operator",    "bright", "none")
-call s:hl("Exception",   "red",    "none")
+call s:hl("Exception",   "bright",    "none")
 call s:hl("PreProc",     "bright", "none")
-call s:hl("Type",        "red",    "none")
+call s:hl("Type",        "normal",    "none")
 call s:hl("Special",     "bright", "none")
 call s:hl("Underlined",  "none",   "none", "underline")
 call s:hl("Todo",        "yellow", "none", "bold")
-call s:hl("Keyword",     "red",    "none")
+call s:hl("Keyword",     "bright",    "none")
 call s:hl("Delimiter",   "white",  "none")
 call s:hl("SpecialComment", "muted", "none", "bold")
 
@@ -435,7 +435,7 @@ hi! link pythonBuiltinType  AtlasNormal
 hi! link pythonClassVar     AtlasNormal
 hi! link pythonOperator     AtlasBright
 hi! link pythonRun          AtlasMuted
-hi! link pythonDecorator    AtlasRed
+hi! link pythonDecorator    AtlasBright
 
 " --- Rust ---
 hi! link rustAttribute      Normal

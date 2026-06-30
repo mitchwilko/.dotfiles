@@ -11,9 +11,9 @@ Plug 'sheerun/vim-polyglot'
 " Plug 'wojciechkepka/vim-github-dark'
 " Plug 'vim-airline/vim-airline'
 Plug 'itchyny/lightline.vim'
-Plug 'lervag/vimtex'
-Plug 'tomasr/molokai'
-Plug 'huyvohcmc/atlas.vim'
+" Plug 'lervag/vimtex'
+" Plug 'tomasr/molokai'
+" Plug 'huyvohcmc/atlas.vim'
 
 call plug#end()
 
