@@ -78,3 +78,25 @@ let g:vimtex_indent_enabled = 0
 let g:vimtex_toc_enabled = 0
 let g:vimtex_matchparen_enabled = 0
 
+" Comment Colour Toggle Function
+
+" Toggle Comment highlight color between normal and green
+let g:comment_highlight_toggled = 0
+
+function! ToggleCommentColor()
+  if g:comment_highlight_toggled
+    " revert to atlas's own comment color
+    let fg = g:atlas_colors['muted']
+    let g:comment_highlight_toggled = 0
+    echo "Comment color: muted"
+  else
+    " use atlas's green entry if it has one, else hardcode
+    let fg = g:atlas_colors['amber']
+    let g:comment_highlight_toggled = 1
+    echo "Comment color: amber"
+  endif
+
+  execute 'hi Comment guifg=' . fg[0] . ' ctermfg=' . fg[1]
+endfunction
+
+nnoremap <C-C> :call ToggleCommentColor()<CR>

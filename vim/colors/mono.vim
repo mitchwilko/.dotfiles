@@ -18,6 +18,7 @@ let g:atlas_colors = {
   \ "red"	  : ["#d70000", 160],
   \ "yellow"  : ["#ffdf00", 220],
   \ "green"   : ["#00af00", 34],
+  \ "amber"	  : ["#d75f00", 166],
   \ "none"	  : ["NONE", "NONE"]
   \ }
 
@@ -138,7 +139,7 @@ call s:hl("SpellCap",	"normal", "none", "underline")
 call s:hl("SpellRare",	"muted",  "none", "underline")
 
 " --- syntax ---
-call s:hl("Comment",	 "green",  "none")
+call s:hl("Comment",	 "muted",  "none")
 call s:hl("Constant",	 "normal", "none")
 call s:hl("String",		 "normal", "none")
 call s:hl("Number",		 "normal", "none")
@@ -157,7 +158,7 @@ call s:hl("Underlined",  "none",   "none", "underline")
 call s:hl("Todo",		 "yellow", "none", "bold")
 call s:hl("Keyword",	 "bright",	  "none")
 call s:hl("Delimiter",	 "white",  "none")
-call s:hl("SpecialComment", "muted", "none", "bold")
+call s:hl("SpecialComment", "amber", "none", "bold")
 
 hi! link Boolean	   Constant
 hi! link Character	   Constant
