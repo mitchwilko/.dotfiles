@@ -65,7 +65,7 @@ let g:netrw_browse_split = 0
 " let g:netrw_winsize = 25
 
 " Vimtex Set up paramters
-autocmd FileType tex setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+" autocmd FileType tex setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 let g:vimtex_enabled = 1
 syntax enable
 let g:vimtex_compiler_enabled = 0
