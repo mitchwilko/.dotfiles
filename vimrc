@@ -11,7 +11,7 @@ Plug 'sheerun/vim-polyglot'
 " Plug 'wojciechkepka/vim-github-dark'
 " Plug 'vim-airline/vim-airline'
 Plug 'itchyny/lightline.vim'
-" Plug 'lervag/vimtex'
+Plug 'lervag/vimtex'
 " Plug 'tomasr/molokai'
 " Plug 'huyvohcmc/atlas.vim'
 
@@ -38,23 +38,34 @@ let &t_SI = "\e[5 q"
 " \e[5 q: Blinking bar.
 " \e[2 q: Steady block. 
 
+" MY HANDLING OF TABS
+:set noexpandtab	" Stop converting tabs to spaces
+:set tabstop=4		" Set tab width to 4 spaces
+:set shiftwidth=4	" Set auto-indent width to 4 spaces
+:retab!				" Force-convert all existing space-indents to real tabs
+":set listchars=tab:>-,trail:-
+set listchars=tab:├─>
+"set listchars=tab:\|\ ,trail:-,extends:>,precedes:<
+set list
+
 " default opening of tabs
 set splitright
 set splitbelow
 
 " Light Line Config
 let g:lightline = {
-      \ 'colorscheme': 'mono',
-      \ }
+		\ 'colorscheme': 'mono',
+		\ }
 
 " Netrw Configs 
 " These are formed as auto commands 
 autocmd FileType netrw setlocal relativenumber
-let g:netrw_keepdir = 0
+let g:netrw_keepdir = 1
 let g:netrw_browse_split = 0
 " let g:netrw_winsize = 25
 
 " Vimtex Set up paramters
+autocmd FileType tex setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 let g:vimtex_enabled = 1
 syntax enable
 let g:vimtex_compiler_enabled = 0

@@ -13,9 +13,9 @@ if exists('g:lightline')
     let s:p = {'normal':{}, 'inactive':{}, 'insert':{}, 'replace':{}, 'visual':{}, 'tabline':{}, 'terminal':{}}
 
     " normal
-    let s:p.normal.left   = [ [ s:bg,     s:bright, 'bold' ], [ s:bright, s:dark, 'bold' ] ]
+    let s:p.normal.left   = [ [ s:bright, s:bg, 'bold' ], [ s:bright, s:dark, 'bold' ] ]
     let s:p.normal.middle = [ [ s:normal, s:dark           ] ]
-    let s:p.normal.right  = [ [ s:bg,     s:bright         ], [ s:bright, s:dark         ] ]
+    let s:p.normal.right  = [ [ s:bright, s:bg         ], [ s:bright, s:dark         ] ]
     let s:p.normal.error   = [ [ s:bg,   s:red    ] ]
     let s:p.normal.warning = [ [ s:dark, s:yellow ] ]
 
@@ -25,24 +25,24 @@ if exists('g:lightline')
     let s:p.inactive.right  = [ [ s:muted,  s:dark  ], [ s:normal, s:dark  ] ]
 
     " insert
-    let s:p.insert.left   = [ [ s:bg,     s:red,    'bold' ], [ s:bright, s:dark, 'bold' ] ]
-    let s:p.insert.middle = [ [ s:normal, s:dark           ] ]
-    let s:p.insert.right  = [ [ s:bg,     s:red            ], [ s:bright, s:dark         ] ]
+    let s:p.insert.left   = [ [ s:yellow,   s:bg,    'bold' ], [ s:bright, s:dark, 'bold' ] ]
+    let s:p.insert.middle = [ [ s:normal,   s:dark          ] ]
+    let s:p.insert.right  = [ [ s:yellow,   s:bg            ], [ s:bright, s:dark         ] ]
 
     " replace
-    let s:p.replace.left   = [ [ s:bg,     s:muted,  'bold' ], [ s:bright, s:dark, 'bold' ] ]
-    let s:p.replace.middle = [ [ s:normal, s:dark           ] ]
-    let s:p.replace.right  = [ [ s:bg,     s:muted          ], [ s:bright, s:dark         ] ]
+    let s:p.replace.left   = [ [ s:muted,   s:bg,  'bold' ], [ s:bright, s:dark, 'bold' ] ]
+    let s:p.replace.middle = [ [ s:normal,  s:dark        ] ]
+    let s:p.replace.right  = [ [ s:muted,   s:bg          ], [ s:bright, s:dark         ] ]
 
     " visual
-    let s:p.visual.left   = [ [ s:bg,     s:white,  'bold' ], [ s:bright, s:dark, 'bold' ] ]
-    let s:p.visual.middle = [ [ s:normal, s:dark           ] ]
-    let s:p.visual.right  = [ [ s:bg,     s:white          ], [ s:bright, s:dark         ] ]
+    let s:p.visual.left   = [ [ s:green,    s:bg,  'bold' ], [ s:bright, s:dark, 'bold' ] ]
+    let s:p.visual.middle = [ [ s:normal,   s:dark        ] ]
+    let s:p.visual.right  = [ [ s:green,    s:bg          ], [ s:bright, s:dark         ] ]
 
     " terminal
-    let s:p.terminal.left   = [ [ s:bg,     s:yellow, 'bold' ], [ s:bright, s:dark, 'bold' ] ]
-    let s:p.terminal.middle = [ [ s:normal, s:dark           ] ]
-    let s:p.terminal.right  = [ [ s:bg,     s:yellow         ], [ s:bright, s:dark         ] ]
+    let s:p.terminal.left   = [ [ s:red,    s:bg, 'bold' ], [ s:bright, s:dark, 'bold' ] ]
+    let s:p.terminal.middle = [ [ s:normal, s:dark       ] ]
+    let s:p.terminal.right  = [ [ s:red,    s:bg         ], [ s:bright, s:dark         ] ]
 
     " tabline
     let s:p.tabline.left   = [ [ s:normal, s:dark   ] ]

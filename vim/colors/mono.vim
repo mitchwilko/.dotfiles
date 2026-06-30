@@ -8,7 +8,7 @@ endif
 let g:colors_name='mono'
 
 let g:atlas_colors = {
-  \ "bg"      : ["#121212", 233],
+  \ "bg"      : ["#000000", 16],
   \ "dark"    : ["#262626", 235],
   \ "dim"     : ["#444444", 238],
   \ "muted"   : ["#666666", 242],
