@@ -99,4 +99,4 @@ function! ToggleCommentColor()
   execute 'hi Comment guifg=' . fg[0] . ' ctermfg=' . fg[1]
 endfunction
 
-nnoremap <C-C> :call ToggleCommentColor()<CR>
+nnoremap <C-s> :call ToggleCommentColor()<CR>
