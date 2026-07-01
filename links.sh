@@ -13,3 +13,5 @@ ln -nsf ~/.dotfiles/zshrc ~/.zshrc
 ln -nsf ~/.dotfiles/bashrc ~/.bashrc
 
 ln -sf ~/.dotfiles/wolhosts ~/.wolhosts
+
+ln -sf ~/.dotfiles/yazi ~/.config/yazi

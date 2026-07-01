@@ -138,3 +138,7 @@ unset __conda_setup
 
 # Custom Wake on LAN Command
 alias wol='wakeonlan -f ~/.wolhosts'
+
+# Configure Defualt editor
+export EDITOR="vim" # Or "vim"
+export VISUAL="vim"

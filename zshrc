@@ -22,3 +22,7 @@ PROMPT='%F{yellow}%n@%m%f %F{magenta}%1~%f %# '
 
 # Adding for Light Line and Air Line
 export TERM=xterm-256color
+
+# Configure defualt editor
+export EDITOR="vim" # Or "vim"
+export VISUAL="vim"
