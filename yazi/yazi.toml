@@ -2,11 +2,22 @@
 edit_in_tmux = [
 	{ run = 'if [ -n "$TMUX" ]; then tmux new-window -c "$PWD" "$EDITOR \"$@\""; else $EDITOR "$@"; fi', block = true, desc = "Edit in Tmux Tab" }
 ]
+pdf-linux = [
+    { run = 'zathura "$@"', orphan = true, for = "unix" }
+]
+pdf_macos = [
+    { run = 'open -a Skim "$@"', orphan = true, for = "macos" }
+]
+image_maocs = [
+	{ run = 'open -a Preview "$@"', orphan = true, for = "macos" }
+]
 
 [open]
 rules = [
 	{ mime = "*.txt", use = [ "edit_in_tmux", "reveal" ] },
 	{ mime = "text/*", use = [ "edit_in_tmux", "reveal" ] },
+	{ mime = "*.pdf", use = "pdf_macos" },
+	{ mime = "image/*", use = "image_macos" }
 ]
 
 [preview]
