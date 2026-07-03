@@ -142,6 +142,7 @@ alias wol='wakeonlan -f ~/.wolhosts'
 # Configure Defualt editor
 export EDITOR="vim" # Or "vim"
 export VISUAL="vim"
+set o vi
 
 # Script required to implement Yazi
 function y() {
