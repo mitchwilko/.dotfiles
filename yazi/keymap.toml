@@ -21,15 +21,19 @@ desc = "Open vertical tmux pane at current PWD"
 [[mgr.prepend_keymap]]
 on = [ "o", "c" ]
 run = 'shell "tmux new-window \"vim \\\"$1\\\"\""'
-desc = "Open hovered file in new tmux window"
+desc = "Open in new tmux window"
 
 [[mgr.prepend_keymap]]
 on = [ "o", "%" ]
 run = 'shell "tmux split-window -h \"vim \\\"$1\\\"\""'
-desc = "Open hovered file in vertical split"
+desc = "Open in vertical split"
 
 [[mgr.prepend_keymap]]
 on = [ "o", "\"" ]
 run = 'shell "tmux split-window -v \"vim \\\"$1\\\"\""'
-desc = "Open hovered file in horizontal split"
+desc = "Open in horizontal split"
 
+[[mgr.prepend_keymap]]
+on = [ "o", "o" ]
+run = "shell 'vim \"$@\"' --block --confirm"
+desc = "Open in VIm"
