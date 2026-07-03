@@ -8,15 +8,15 @@ pdf-linux = [
 pdf_macos = [
     { run = 'open -a Skim "$@"', orphan = true, for = "macos" }
 ]
-image_maocs = [
+image_macos = [
 	{ run = 'open -a Preview "$@"', orphan = true, for = "macos" }
 ]
 
 [open]
 rules = [
-	{ mime = "*.txt", use = [ "edit_in_tmux", "reveal" ] },
+	{ url = "*.txt", use = [ "edit_in_tmux", "reveal" ] },
 	{ mime = "text/*", use = [ "edit_in_tmux", "reveal" ] },
-	{ mime = "*.pdf", use = "pdf_macos" },
+	{ url = "*.pdf", use = "pdf_macos" },
 	{ mime = "image/*", use = "image_macos" }
 ]
 
