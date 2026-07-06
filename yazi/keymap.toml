@@ -15,8 +15,8 @@ desc = "Open vertical tmux pane at current PWD"
 
 [[mgr.prepend_keymap]]
 on   = [ "t", "\"" ]
-run  = "shell 'tmux split-window -h -c \"$PWD\"' --block"
-desc = "Open vertical tmux pane at current PWD"
+run  = "shell 'tmux split-window -v -c \"$PWD\"' --block"
+desc = "Open horizontal tmux pane at current PWD"
 
 [[mgr.prepend_keymap]]
 on = [ "o", "c" ]
@@ -39,7 +39,7 @@ run = "shell 'vim \"$@\"' --block --confirm"
 desc = "Open in VIm"
 
 [[mgr.prepend_keymap]]
-on = "\""
+on = "%"
 run = "plugin split-tabs spl_toggle"
 desc = "Split-tabs: toggle split tabs mode"
 
