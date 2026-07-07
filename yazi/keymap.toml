@@ -44,7 +44,12 @@ run = "plugin split-tabs spl_toggle"
 desc = "Split-tabs: toggle split tabs mode"
 
 [[mgr.prepend_keymap]]
-on = "<Tab>"
+on = ">"
+run = "plugin split-tabs spl_switch_tab"
+desc = "Split-tabs: switch to the other pane"
+
+[[mgr.prepend_keymap]]
+on = "<"
 run = "plugin split-tabs spl_switch_tab"
 desc = "Split-tabs: switch to the other pane"
 

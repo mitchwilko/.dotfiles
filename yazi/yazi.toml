@@ -15,6 +15,7 @@ image_macos = [
 [open]
 rules = [
 	{ url = "*.txt", use = [ "edit_in_tmux", "reveal" ] },
+	{ url = "*.{py,js,ts,rs,go,c,cpp,h,html,css,sh,json,md,toml,yaml}", use = "edit_in_tmux" },
 	{ mime = "text/*", use = [ "edit_in_tmux", "reveal" ] },
 	{ url = "*.pdf", use = "pdf_macos" },
 	{ mime = "image/*", use = "image_macos" }
