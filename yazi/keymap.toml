@@ -20,22 +20,22 @@ desc = "Open horizontal tmux pane at current PWD"
 
 [[mgr.prepend_keymap]]
 on = [ "o", "c" ]
-run = 'shell "tmux new-window \"vim \\\"$1\\\"\""'
+run = 'shell "tmux new-window \"$EDITOR \\\"$1\\\"\""'
 desc = "Open in new tmux window"
 
 [[mgr.prepend_keymap]]
 on = [ "o", "%" ]
-run = 'shell "tmux split-window -h \"vim \\\"$1\\\"\""'
+run = 'shell "tmux split-window -h \"$EDITOR \\\"$1\\\"\""'
 desc = "Open in vertical split"
 
 [[mgr.prepend_keymap]]
 on = [ "o", "\"" ]
-run = 'shell "tmux split-window -v \"vim \\\"$1\\\"\""'
+run = 'shell "tmux split-window -v \"$EDITOR \\\"$1\\\"\""'
 desc = "Open in horizontal split"
 
 [[mgr.prepend_keymap]]
 on = [ "o", "o" ]
-run = "shell 'vim \"$@\"' --block --confirm"
+run = "shell '$EDITOR \"$@\"' --block --confirm"
 desc = "Open in VIm"
 
 [[mgr.prepend_keymap]]

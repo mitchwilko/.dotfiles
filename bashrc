@@ -140,8 +140,8 @@ unset __conda_setup
 alias wol='wakeonlan -f ~/.wolhosts'
 
 # Configure Defualt editor
-export EDITOR="vim" # Or "vim"
-export VISUAL="vim"
+export EDITOR="nvim" # Or "vim"
+export VISUAL="nvim"
 set o vi
 
 # Script required to implement Yazi

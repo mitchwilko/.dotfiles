@@ -8,6 +8,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.laststatus = 2
+vim.opt.mouse = ""
 
 -- vim.opt.colorcolumn = "81"
 -- vim.cmd("highlight ColorColumn ctermbg=DarkBlue")
@@ -86,16 +87,16 @@ vim.g.netrw_browse_split = 0
 --     vim.opt_local.expandtab = true
 --   end,
 -- })
-vim.g.vimtex_enabled = 1
-vim.cmd("syntax enable")
-vim.g.vimtex_compiler_enabled = 0
-vim.g.vimtex_view_enabled = 0
-vim.g.vimtex_motion_enabled = 0
-vim.g.vimtex_text_obj_enabled = 0
-vim.g.vimtex_completion_enabled = 0
-vim.g.vimtex_indent_enabled = 0
-vim.g.vimtex_toc_enabled = 0
-vim.g.vimtex_matchparen_enabled = 0
+-- vim.g.vimtex_enabled = 1
+-- vim.cmd("syntax enable")
+-- vim.g.vimtex_compiler_enabled = 0
+-- vim.g.vimtex_view_enabled = 0
+-- vim.g.vimtex_motion_enabled = 0
+-- vim.g.vimtex_text_obj_enabled = 0
+-- vim.g.vimtex_completion_enabled = 0
+-- vim.g.vimtex_indent_enabled = 0
+-- vim.g.vimtex_toc_enabled = 0
+-- vim.g.vimtex_matchparen_enabled = 0
 
 -- =====================================================
 -- Comment Colour Toggle Function
