@@ -1,0 +1,83 @@
+" Set default visual basis
+colorscheme mono
+" let g:molokai_original = 0
+set number
+set relativenumber
+set cursorline
+set laststatus=2
+" set colorcolumn=81
+" highlight ColorColumn ctermbg=DarkBlue
+" highlight ColorColumn ctermbg=DarkBlue
+" Make 81st column stand out
+" call matchadd('ColorColumn', '\%81v', 100)
+
+" Set the cursor between box and line in insert and normal mode
+let &t_EI = "\e[1 q"
+let &t_SR = "\e[3 q"
+let &t_SI = "\e[5 q"
+" \e[6 q: Steady bar (line).
+" \e[5 q: Blinking bar.
+" \e[2 q: Steady block. 
+
+" MY HANDLING OF TABS
+:set noexpandtab	" Stop converting tabs to spaces
+:set tabstop=4		" Set tab width to 4 spaces
+:set shiftwidth=4	" Set auto-indent width to 4 spaces
+":retab!				" Force-convert all existing space-indents to real tabs
+set listchars=tab:├─>
+set list
+
+" default opening of tabs
+set splitright
+set splitbelow
+
+" Automatically save things sometimes (eg on make)
+set autowrite
+
+" Light Line Config
+let g:lightline = {
+		\ 'colorscheme': 'mono',
+		\ }
+
+" Netrw Configs 
+" These are formed as auto commands 
+autocmd FileType netrw setlocal relativenumber
+let g:netrw_keepdir = 1
+let g:netrw_browse_split = 0
+" let g:netrw_winsize = 25
+
+" Vimtex Set up paramters
+" autocmd FileType tex setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+let g:vimtex_enabled = 1
+syntax enable
+let g:vimtex_compiler_enabled = 0
+let g:vimtex_view_enabled = 0
+let g:vimtex_motion_enabled = 0
+let g:vimtex_text_obj_enabled = 0
+let g:vimtex_completion_enabled = 0
+let g:vimtex_indent_enabled = 0
+let g:vimtex_toc_enabled = 0
+let g:vimtex_matchparen_enabled = 0
+
+" Comment Colour Toggle Function
+
+" Toggle Comment highlight color between normal and green
+let g:comment_highlight_toggled = 0
+
+function! ToggleCommentColor()
+  if g:comment_highlight_toggled
+    " revert to atlas's own comment color
+    let fg = g:atlas_colors['muted']
+    let g:comment_highlight_toggled = 0
+    echo "Comment color: muted"
+  else
+    " use atlas's green entry if it has one, else hardcode
+    let fg = g:atlas_colors['amber']
+    let g:comment_highlight_toggled = 1
+    echo "Comment color: amber"
+  endif
+
+  execute 'hi Comment guifg=' . fg[0] . ' ctermfg=' . fg[1]
+endfunction
+
+nnoremap <C-s> :call ToggleCommentColor()<CR>
