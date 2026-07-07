@@ -1,4 +1,35 @@
 -- =====================================================
+-- vim-plug bootstrap (auto-install if not already present)
+-- =====================================================
+local data_dir = vim.fn.stdpath("data")
+local autoload_plug_path = data_dir .. "/site/autoload/plug.vim"
+ 
+if vim.fn.empty(vim.fn.glob(autoload_plug_path)) > 0 then
+  vim.fn.system({
+    "curl",
+    "-fLo",
+    autoload_plug_path,
+    "--create-dirs",
+    "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim",
+  })
+  vim.cmd("autocmd VimEnter * PlugInstall --sync | source $MYVIMRC")
+end
+ 
+-- =====================================================
+-- Plugins
+-- =====================================================
+vim.fn["plug#begin"](vim.fn.stdpath("data") .. "/plugged")
+ 
+vim.fn["plug#"]("itchyny/lightline.vim")
+vim.fn["plug#"]("lervag/vimtex")
+-- vim.fn["plug#"]("your-username/atlas.vim")   -- wherever your atlas colorscheme comes from
+-- Add any other plugins here, e.g.:
+-- vim.fn["plug#"]("tpope/vim-fugitive")
+-- vim.fn["plug#"]("nvim-treesitter/nvim-treesitter", { ["do"] = ":TSUpdate" })
+ 
+vim.fn["plug#end"]()
+
+-- =====================================================
 -- Set default visual basis
 -- =====================================================
 vim.cmd.colorscheme("mono")
