@@ -1,33 +1,34 @@
 -- =====================================================
 -- vim-plug bootstrap (auto-install if not already present)
 -- =====================================================
-local data_dir = vim.fn.stdpath("data")
-local autoload_plug_path = data_dir .. "/site/autoload/plug.vim"
- 
-if vim.fn.empty(vim.fn.glob(autoload_plug_path)) > 0 then
-  vim.fn.system({
-    "curl",
-    "-fLo",
-    autoload_plug_path,
-    "--create-dirs",
-    "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim",
-  })
-  vim.cmd("autocmd VimEnter * PlugInstall --sync | source $MYVIMRC")
-end
+-- local data_dir = vim.fn.stdpath("data")
+-- local autoload_plug_path = data_dir .. "/site/autoload/plug.vim"
+--  
+-- if vim.fn.empty(vim.fn.glob(autoload_plug_path)) > 0 then
+--   vim.fn.system({
+--     "curl",
+--     "-fLo",
+--     autoload_plug_path,
+--     "--create-dirs",
+--     "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim",
+--   })
+--   vim.cmd("autocmd VimEnter * PlugInstall --sync | source $MYVIMRC")
+-- end
  
 -- =====================================================
 -- Plugins
 -- =====================================================
-vim.fn["plug#begin"](vim.fn.stdpath("data") .. "/plugged")
- 
-vim.fn["plug#"]("itchyny/lightline.vim")
-vim.fn["plug#"]("lervag/vimtex")
--- vim.fn["plug#"]("your-username/atlas.vim")   -- wherever your atlas colorscheme comes from
--- Add any other plugins here, e.g.:
--- vim.fn["plug#"]("tpope/vim-fugitive")
--- vim.fn["plug#"]("nvim-treesitter/nvim-treesitter", { ["do"] = ":TSUpdate" })
- 
-vim.fn["plug#end"]()
+
+local vim = vim
+local Plug = vim.fn['plug#']
+
+vim.call('plug#begin')
+
+Plug('itchyny/lightline.vim')
+Plug('stevearc/oil.nvim', { ['branch'] = 'nvim-0.9' })
+Plug('echasnovski/mini.icons')
+
+vim.call('plug#end')
 
 -- =====================================================
 -- Set default visual basis
@@ -82,6 +83,8 @@ vim.opt.list = true
 -- =====================================================
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+vim.keymap.set('n', "<C-w>n", ':tabnext<CR>', { desc = 'Move to Next Tab' })
+vim.keymap.set('n', "<C-w>p", ':tabprevious<CR>', { desc = 'Move to Previous Tab' })
 
 -- Automatically save things sometimes (eg on make)
 vim.opt.autowrite = true
@@ -105,6 +108,44 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.g.netrw_keepdir = 1
 vim.g.netrw_browse_split = 0
 -- vim.g.netrw_winsize = 25
+
+-- =====================================================
+-- Oil Configs
+-- =====================================================
+
+require("mini.icons").setup()
+vim.g.have_nerd_font = true
+require("oil").setup({
+  -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
+  -- Set to false if you want some other plugin (e.g. netrw) to open when you edit directories.
+  default_file_explorer = true,
+  view_options = {
+    show_hidden = true,
+  },
+  use_icons = true,
+  columns = {
+    "icon",
+    -- "permissions",
+    -- "size",
+    -- "mtime",
+  },
+  watch_for_changes = true
+})
+
+-- =====================================================
+-- Remap netrw-style commands to oil.nvim
+-- =====================================================
+-- Open parent directory of current file (replaces :Explore / :Ex)
+vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory in Oil' })
+
+-- -- Open oil in a floating window (optional, nice alternative to netrw split)
+-- vim.keymap.set('n', '<leader>e', function()
+--   require('oil').toggle_float()
+-- end, { desc = 'Toggle Oil float' })
+
+-- Vertical/horizontal split equivalents to :Vexplore / :Sexplore
+vim.keymap.set('n', "<C-w>%", '<CMD>vsplit | Oil<CR>', { desc = 'Open Oil in vertical split' })
+vim.keymap.set('n', '<C-w>\"', '<CMD>split | Oil<CR>', { desc = 'Open Oil in horizontal split' })
 
 -- =====================================================
 -- Vimtex setup (kept minimal, matching original)
