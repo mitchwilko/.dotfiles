@@ -38,3 +38,5 @@ function y() {
 
 # Add Vim key bindings
 bindkey -v
+
+fastfetch
