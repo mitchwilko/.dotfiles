@@ -153,3 +153,8 @@ function y() {
 	command rm -f -- "$tmp"
 }
 . "$HOME/.cargo/env"
+
+# Only run fastfetch if NOT inside tmux
+if [ -z "$TMUX" ]; then
+	fastfetch
+fi

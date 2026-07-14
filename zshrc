@@ -39,4 +39,7 @@ function y() {
 # Add Vim key bindings
 bindkey -v
 
-fastfetch
+# Only run fastfetch if NOT inside tmux
+if [ -z "$TMUX" ]; then
+	fastfetch
+fi

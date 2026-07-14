@@ -39,6 +39,11 @@ run = "shell '$EDITOR \"$@\"' --block --confirm"
 desc = "Open in VIm"
 
 [[mgr.prepend_keymap]]
+on = [ "-" ]
+run = "shell '$EDITOR .' --block --confirm"
+desc = "Open in VIm"
+
+[[mgr.prepend_keymap]]
 on = "%"
 run = "plugin split-tabs spl_toggle"
 desc = "Split-tabs: toggle split tabs mode"
@@ -57,3 +62,5 @@ desc = "Split-tabs: switch to the other pane"
 on = "P"
 run = "plugin split-tabs spl_preview"
 desc = "Split-tabs: toggle preview pane"
+
+

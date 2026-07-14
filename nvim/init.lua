@@ -125,11 +125,12 @@ require("oil").setup({
   use_icons = true,
   columns = {
     "icon",
-    -- "permissions",
+    "permissions",
     -- "size",
     -- "mtime",
   },
-  watch_for_changes = true
+  watch_for_changes = true,
+  skip_confirm_for_simple_edits = true
 })
 
 -- =====================================================
@@ -137,6 +138,10 @@ require("oil").setup({
 -- =====================================================
 -- Open parent directory of current file (replaces :Explore / :Ex)
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory in Oil' })
+
+-- Vertical/horizontal split equivalents to :Vexplore / :Sexplore
+vim.keymap.set('n', "<C-w>%", '<CMD>vsplit | Oil<CR>', { desc = 'Open Oil in vertical split' })
+vim.keymap.set('n', '<C-w>\"', '<CMD>split | Oil<CR>', { desc = 'Open Oil in horizontal split' })
 
 -- -- Open oil in a floating window (optional, nice alternative to netrw split)
 -- vim.keymap.set('n', '<leader>e', function()
