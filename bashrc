@@ -139,6 +139,22 @@ unset __conda_setup
 # Custom Wake on LAN Command
 alias wol='wakeonlan -f ~/.wolhosts'
 
+# Custom tmux attach command
+alias t='tmux attach-session || tmux new-session'
+
+# t() {
+#     if [ $# -eq 0 ]; then
+#         tmux attach-session || tmux new-session
+#     elif tmux has-session -t "$1" 2>/dev/null; then
+#         tmux attach-session -t "$1"
+#     else
+#         echo "No tmux session named '$1'."
+#         echo
+#         tmux list-sessions
+#         return 1
+#     fi
+# }
+
 # Configure Defualt editor
 export EDITOR="nvim" # Or "vim"
 export VISUAL="nvim"
